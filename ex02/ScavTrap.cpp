@@ -4,14 +4,14 @@ ScavTrap::ScavTrap(std::string name): ClapTrap(name){
 	this->_hitPoints = 100;
 	this->_energyPoints = 50;
 	this->_attackDamage = 20;
-	std::cout << this->_name << " updated to ScavTrap" << "\n";
+	std::cout << "ScavTrap " << this->_name << " is alive" << "\n";
 }
 
 ScavTrap::ScavTrap(): ClapTrap(){
 	this->_hitPoints = 100;
 	this->_energyPoints = 50;
 	this->_attackDamage = 20;
-	std::cout << this->_name << " updated to ScavTrap by default" << "\n";
+	std::cout << "ScavTrap " << this->_name << " is alive" << "\n";
 }
 
 ScavTrap::~ScavTrap(){
