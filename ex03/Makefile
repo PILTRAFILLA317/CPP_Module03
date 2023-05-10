@@ -8,6 +8,7 @@ FILE = main \
 ClapTrap \
 ScavTrap \
 FragTrap \
+DiamondTrap \
 
 SRCS = $(addsuffix .cpp, $(FILE))
 OBJS = $(addsuffix .o, $(FILE))
