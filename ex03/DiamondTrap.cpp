@@ -9,6 +9,22 @@ DiamondTrap::DiamondTrap(std::string name){
 	std::cout << "Diamondtrap " << this->_name << " updated to Diamondtrap" << "\n";
 }
 
+DiamondTrap::DiamondTrap(const DiamondTrap& obj){
+	std::cout << "Diamondtrap copy constructor called" << "\n";
+	*this = obj;
+}
+
+DiamondTrap &DiamondTrap::operator=(const DiamondTrap& obj){
+	std::cout << "Diamondtrap assignation operator called" << "\n";
+	if (this != &obj){
+		this->_name = obj._name;
+		this->_hitPoints = obj._hitPoints;
+		this->_energyPoints = obj._energyPoints;
+		this->_attackDamage = obj._attackDamage;
+	}
+	return *this;
+}
+
 DiamondTrap::~DiamondTrap(){
 	std::cout << "DiamondTrap " << this->_name << " destroyed" << "\n";
 }

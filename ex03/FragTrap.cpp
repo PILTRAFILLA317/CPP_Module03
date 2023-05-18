@@ -14,6 +14,22 @@ FragTrap::FragTrap(): ClapTrap(){
 	std::cout << "Fragtrap " << this->_name << " updated by default" << "\n";
 }
 
+FragTrap::FragTrap(const FragTrap& obj){
+	std::cout << "Fragtrap copy constructor called" << "\n";
+	*this = obj;
+}
+
+FragTrap &FragTrap::operator=(const FragTrap& obj){
+	std::cout << "Fragtrap assignation operator called" << "\n";
+	if (this != &obj){
+		this->_name = obj._name;
+		this->_hitPoints = obj._hitPoints;
+		this->_energyPoints = obj._energyPoints;
+		this->_attackDamage = obj._attackDamage;
+	}
+	return *this;
+}
+
 FragTrap::~FragTrap(){
 	std::cout << "FragTrap " << _name << " destroyed" << "\n";
 }

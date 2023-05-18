@@ -7,6 +7,22 @@ ScavTrap::ScavTrap(std::string name): ClapTrap(name){
 	std::cout << "ScavTrap " << this->_name << " updated" << "\n";
 }
 
+ScavTrap::ScavTrap(const ScavTrap& obj){
+	std::cout << "Scavtrap copy constructor called" << "\n";
+	*this = obj;
+}
+
+ScavTrap &ScavTrap::operator=(const ScavTrap& obj){
+	std::cout << "Scavtrap assignation operator called" << "\n";
+	if (this != &obj){
+		this->_name = obj._name;
+		this->_hitPoints = obj._hitPoints;
+		this->_energyPoints = obj._energyPoints;
+		this->_attackDamage = obj._attackDamage;
+	}
+	return *this;
+}
+
 ScavTrap::ScavTrap(): ClapTrap(){
 	this->_hitPoints = 100;
 	this->_energyPoints = 50;

@@ -20,6 +20,11 @@ ClapTrap::ClapTrap(){
 	std::cout << "Claptrap Nobody is alive" << "\n";
 }
 
+ClapTrap::ClapTrap(const ClapTrap& obj){
+	std::cout << "Claptrap copy constructor called" << "\n";
+	*this = obj;
+}
+
 void ClapTrap::attack(const std::string& target){
 	if (this->_energyPoints > 0 && this->_hitPoints > 0)
 		std::cout << "ClapTrap " << this->_name << " attacks " << target << ", causing " << this->_attackDamage << " points of damage!" <<"\n";
@@ -27,6 +32,17 @@ void ClapTrap::attack(const std::string& target){
 		std::cout << "Claptrap " << this->_name << " is dead" << "\n";
 	else if (this->_energyPoints == 0)
 		std::cout << "ClapTrap " << this->_name << " has not enough energy points to attack!" << "\n";
+}
+
+ClapTrap &ClapTrap::operator=(const ClapTrap& obj){
+	std::cout << "Claptrap assignation operator called" << "\n";
+	if (this != &obj){
+		this->_name = obj._name;
+		this->_hitPoints = obj._hitPoints;
+		this->_energyPoints = obj._energyPoints;
+		this->_attackDamage = obj._attackDamage;
+	}
+	return *this;
 }
 
 void ClapTrap::takeDamage(unsigned int amount){
