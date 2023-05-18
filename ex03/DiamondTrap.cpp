@@ -7,8 +7,6 @@ DiamondTrap::DiamondTrap(std::string name){
 	this->_energyPoints = 50;
 	this->_attackDamage = 30;
 	std::cout << "Diamondtrap " << this->_name << " updated to Diamondtrap" << "\n";
-	std::cout << _hitPoints << "\n";
-	std::cout << _energyPoints << "\n";
 }
 
 DiamondTrap::~DiamondTrap(){

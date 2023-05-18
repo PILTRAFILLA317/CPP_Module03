@@ -6,7 +6,7 @@ int main()
 	{
 		std::cout << "\033[34mConstructing\033[0m" << std::endl;
 		ClapTrap a;
-		ClapTrap b("Cody");
+		ClapTrap b("Jose");
 
 		std::cout << "\033[34mTesting\033[0m" << std::endl;
 		a.attack("some other robot");
@@ -16,7 +16,7 @@ int main()
 		a.attack("some other other robot");
 		b.beRepaired(3);
 		for (int i = 0; i < 12; i++)
-			b.attack("Cody-clone");
+			b.attack("Jose-clone");
 		b.beRepaired(3);
 		std::cout << "\033[34mDeconstructing\033[0m" << std::endl;
 	}
@@ -24,7 +24,7 @@ int main()
 	{
 		std::cout << "\033[34mConstructing\033[0m" << std::endl;
 		ScavTrap c;
-		ScavTrap d("Savage");
+		ScavTrap d("Jose");
 
 		std::cout << "\033[34mTesting\033[0m" << std::endl;
 		c.attack("CloneTrap");
@@ -35,7 +35,7 @@ int main()
 		c.beRepaired(22);
 		c.guardGate();
 		c.guardGate();
-		d.attack("Savage-clone");
+		d.attack("Jose-clone");
 		d.takeDamage(101);
 		d.takeDamage(15);
 		d.attack("ScavTrap-clone");

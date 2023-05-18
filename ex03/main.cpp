@@ -9,7 +9,7 @@ int main()
 	{
 		std::cout << "\033[34mConstructing\033[0m" << std::endl;
 		ClapTrap a;
-		ClapTrap b("Cody");
+		ClapTrap b("Jose");
 
 		std::cout << "\033[34mTesting\033[0m" << std::endl;
 		a.attack("some other robot");
@@ -19,7 +19,7 @@ int main()
 		a.attack("some other other robot");
 		b.beRepaired(3);
 		for (int i = 0; i < 12; i++)
-			b.attack("Cody-clone");
+			b.attack("Jose-clone");
 		b.beRepaired(3);
 		std::cout << "\033[34mDeconstructing\033[0m" << std::endl;
 	}
@@ -27,7 +27,7 @@ int main()
 	{
 		std::cout << "\033[34mConstructing\033[0m" << std::endl;
 		ScavTrap a;
-		ScavTrap b("Savage");
+		ScavTrap b("Jose");
 
 		std::cout << "\033[34mTesting\033[0m" << std::endl;
 		a.attack("CloneTrap");
@@ -38,7 +38,7 @@ int main()
 		a.beRepaired(22);
 		a.guardGate();
 		a.guardGate();
-		b.attack("Savage-clone");
+		b.attack("Jose-clone");
 		b.takeDamage(101);
 		b.takeDamage(15);
 		b.attack("ScavTrap-clone");
@@ -48,7 +48,7 @@ int main()
 	{
 		std::cout << "\033[34mConstructing\033[0m" << std::endl;
 		FragTrap a;
-		FragTrap b("Chadd");
+		FragTrap b("Jose");
 
 		std::cout << "\033[34mTesting\033[0m" << std::endl;
 		a.highFivesGuys();
@@ -64,16 +64,14 @@ int main()
 	std::cout << "\n\n### TESTING DIAMONDTRAP ###\n" << std::endl;
 	{
 		std::cout << "\033[34mConstructing\033[0m" << std::endl;
-		// DiamondTrap a;
-		// DiamondTrap c(a);
-		DiamondTrap b("Giga Chadd");
+		DiamondTrap b("Giga Jose");
 
 		std::cout << "\033[34mTesting\033[0m" << std::endl;
-		// a.whoAmI();
-		// a.attack("some super random dude");
+		b.attack("Jose-clone");
+		b.highFivesGuys();
+		b.guardGate();
 		b.whoAmI();
-		b.attack("Chadd-clone");
-		// c.whoAmI();
+		b.takeDamage(101);
 		std::cout << "\033[34mDeconstructing\033[0m" << std::endl;
 	}
 	return (0);
